@@ -1,3 +1,83 @@
+```C++
+src
+  +-graph
+    | +- LoginPage.java	 	  // 登陆界面
+    | +- MainPage.java  	  // 主界面
+    | +- RegisterPage.java	  // 注册界面
+    +- main
+      | +- UserPage.java	  //主界面组件-用户管理
+      | +- TitlePage.java	 // 主界面组件-标签管理
+      | +- TaskPage.java 	 // 主界面组件-任务管理
+      | +- UserInfoPage.java // 主界面组件-个人信息
+      | +- ReSetPwdPage.java // 主界面组件-修改密码
+      | +- Table.java     //  组件-表格
+    +- imagine
+      | +- todo.png
+      | ...           // 图标
+  +-task
+    | +- SNAKETask.java   // 程序入口
+    | +- FakerData.java   // 伪造数据
+    +- dao           //  dao层
+      | +- User.java    
+      | +- Title.java    
+      | +- Task.java 
+    +- Unit				// Unit
+      | +- DataBaseUnit.java  // 连接数据库
+      | +- UserUnit.java     // 用户Unit
+      | +- TitleUnit.java    // 标签Unit
+      | +- TaskUnit.java     // 任务Unit
+      | +- DateUnit.java     // 封装日期Unit
+   
+    
+    
+    
+```
+
+
+
+```mysql
+
+CREATE TABLE `task`.`user` (
+  `userID` VARCHAR(10) NOT NULL,
+  `userName` VARCHAR(20) NOT NULL,
+  `passwd` VARCHAR(16) NOT NULL,
+  `role` SMALLINT(2) NULL DEFAULT 2,
+  `email` VARCHAR(30) NULL,
+  PRIMARY KEY (`userID`),
+  UNIQUE INDEX `userID_UNIQUE` (`userID` ASC) VISIBLE
+);
+
+```
+
+
+
+```mysql
+CREATE TABLE `task`.`title` (
+  `titleID` VARCHAR(10) NOT NULL,
+  `titleName` VARCHAR(20) NOT NULL,
+  `userID` VARCHAR(45) NOT NULL,
+  `titleType` SMALLINT(2) NULL DEFAULT 0,
+  foreign key (userID) references user(userID),
+  PRIMARY KEY (`titleID`)
+);
+```
+
+```C++
+
+CREATE TABLE `task`.`task` (
+  `userID` VARCHAR(10) NOT NULL,
+  `titleID` VARCHAR(45) NOT NULL,
+  `startTime` DATETIME NOT NULL,
+  `endTime` DATETIME NULL DEFAULT NULL,
+  `status` SMALLINT(2) NULL DEFAULT 1,
+  `content` VARCHAR(100) NOT NULL,
+  foreign key (userID) references user(userID),
+  foreign key (titleID) references title(titleID),  
+  PRIMARY KEY (`userID`, `startTime`, `titleID`)
+);
+
+```
+
 ~~测试~~
 
 ~~修改密码----authUser 不加 getdb~~
@@ -117,10 +197,6 @@ java Faker
 http://dius.github.io/java-faker/apidocs/index.html
 
 https://mvnrepository.com/artifact/com.github.javafaker/javafaker/1.0.2
-
-
-
-
 
 
 
