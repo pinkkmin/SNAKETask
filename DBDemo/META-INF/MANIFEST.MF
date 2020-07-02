@@ -1,0 +1,4 @@
+
+Manifest-Version: 1.0
+Main-Class: task.SNKAETask
+Class-Path: lib/mysql-connector-java-8.0.20.jar

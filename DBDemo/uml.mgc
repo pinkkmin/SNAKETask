@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="graph.LoginPage" x="356" y="-21">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="graph.MainPage"
+            endpointName="homePage" kind="Simple"/>
+    </Class>
+    <Class name="graph.MainPage" x="646" y="-94">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="graph.main.UserPage"
+            endpointName="MagUserPage" kind="Simple"/>
+        <Association destinationClassName="graph.main.TitlePage"
+            endpointName="MagTitlePage" kind="Simple"/>
+        <Association destinationClassName="graph.main.UserInfoPage"
+            endpointName="UserInfoPage" kind="Simple"/>
+        <Association destinationClassName="graph.main.TaskPage"
+            endpointName="MagTaskPage" kind="Simple"/>
+        <Association destinationClassName="graph.main.ReSetPwdPage"
+            endpointName="ReSetPwdPage" kind="Simple"/>
+        <Communication destinationClassName="graph.main.ReSetPwdUnit"/>
+        <Communication destinationClassName="graph.main.UserInfoUnit"/>
+        <Communication destinationClassName="graph.main.ReSetPwdPage"/>
+        <Communication destinationClassName="graph.main.UserPage"/>
+        <Communication destinationClassName="graph.main.TitlePage"/>
+        <Communication destinationClassName="graph.main.UserInfoPage"/>
+        <Communication destinationClassName="graph.main.TaskPage"/>
+    </Class>
+    <Class name="graph.main.ReSetPwdPage" x="329" y="400">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="graph.main.UserPage" x="24" y="57">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="graph.RegisterPage" x="897" y="529">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="graph.main.TitlePage" x="1195" y="142">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="graph.main.UserInfoPage" x="915" y="-91">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="graph.MainPage"
+            endpointName="mPage" kind="Simple"/>
+    </Class>
+    <Class name="graph.main.TaskPage" x="1541" y="-39">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>

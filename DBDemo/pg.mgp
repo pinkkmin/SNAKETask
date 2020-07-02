@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="graph" x="285" y="175">
+        <DependencyLink destination="task"/>
+        <DependencyLink destination="task.dao"/>
+        <DependencyLink destination="task.Unit"/>
+        <DependencyLink destination="graph.main"/>
+    </Package>
+    <Package name="graph.imagine" x="106" y="221"/>
+    <Package name="graph.main" x="187" y="306">
+        <DependencyLink destination="task"/>
+        <DependencyLink destination="task.dao"/>
+        <DependencyLink destination="task.Unit"/>
+        <DependencyLink destination="graph"/>
+    </Package>
+    <Package name="task" x="651" y="243">
+        <DependencyLink destination="task.dao"/>
+        <DependencyLink destination="task.Unit"/>
+        <DependencyLink destination="graph"/>
+    </Package>
+    <Package name="task.dao" x="424" y="343">
+        <DependencyLink destination="task.Unit"/>
+    </Package>
+    <Package name="task.Unit" x="526" y="155"/>
+</PackageAnalysis>
